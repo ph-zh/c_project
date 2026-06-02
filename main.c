@@ -3,29 +3,26 @@
 
 int main() {
 
-    int age = 0;
-    float gpa = 0.0f;
-    char grade = '\0';
-    char name[50] = "";
+    char item[50] = "";
+    float price = 0.0f;
+    int quantity = 0;
+    char currency = '$';
+    float total = 0.0f;
 
-    printf("Enter your age: ");
-    scanf("%d", &age);
+    printf("What item whould you like to buy?: ");
+    fgets(item, sizeof(item), stdin);
+    item[strlen(item) - 1] = '\0';
 
-    printf("Enter your gpa: ");
-    scanf("%f", &gpa);
+    printf("What is the price for each?: ");
+    scanf("%f", &price);
 
-    printf("Enter your garde: ");
-    scanf(" %c", &grade);
+    printf("How many whould you like?: ");
+    scanf("%d", &quantity);
 
-    getchar(); //input buffer
-    printf("Enter your full name: ");
-    fgets(name, sizeof(name), stdin);
-    name[strlen(name) -1] = '\0';
+    total = price * quantity;
 
-    printf("%s\n",name);
-    printf("%d\n",age);
-    printf("%.2f\n", gpa);
-    printf("%c\n",grade);
-   
+    printf("\nyYou have bought %d %s's\n", quantity, item);
+    printf("The total is %c%.2f",currency, total);
+
     return 0;
 }
