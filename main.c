@@ -1,14 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
-    float x = 11.09;
-    float y = 9.46;
-    float z;
+    int age = 0;
+    float gpa = 0.0f;
+    char grade = '\0';
+    char name[50] = "";
 
-    z = x * y;
+    printf("Enter your age: ");
+    scanf("%d", &age);
 
-    printf("%.2f\n", z + 100);
-    
+    printf("Enter your gpa: ");
+    scanf("%f", &gpa);
+
+    printf("Enter your garde: ");
+    scanf(" %c", &grade);
+
+    getchar(); //input buffer
+    printf("Enter your full name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) -1] = '\0';
+
+    printf("%s\n",name);
+    printf("%d\n",age);
+    printf("%.2f\n", gpa);
+    printf("%c\n",grade);
+   
     return 0;
 }
