@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("check\n");
+    printf("check2\n");
     return 0;
 }
