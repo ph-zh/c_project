@@ -1,27 +1,32 @@
 #include <stdio.h>
 #include <math.h>
-#include <windows.h>
 
 int main() {
 
-    SetConsoleCP(CP_UTF8);
+    double principal = 0.0;
+    double rate = 0.0;
+    int years = 0;
+    int timesCompounded = 0;
+    double total = 0.0;
 
-    double radius = 0.0;
-    double area = 0.0;
-    double surfaceArea = 0.0;
-    double volume = 0.0;
-    const double PI = 3.14159;
+    printf("Compound Interest Calculator\n");
 
-    printf("Enter the radius: ");
-    scanf("%lf", &radius);
+    printf("Enter the principal (P): ");
+    scanf("%lf", &principal);
 
-    area = PI * pow(radius, 2);
-    surfaceArea = 4 * PI * pow(radius,2);
-    volume = (4.0 / 3.0) * PI * pow(radius, 3);
+    printf("Enter the interest rate %% (r): ");
+    scanf("%lf", &rate);
+    rate = rate / 100;
 
-    printf("Area: %.2lf cm³\n", area);
-    printf("Surface cm³ area: %.2lf cm³\n", surfaceArea);
-    printf("Volume area: %.2lf cm³\n", volume);
+    printf("Enter the # of years (t): ");
+    scanf("%d", &years);
+
+    printf("Enter # of times compunded per year (n): ");
+    scanf("%d", &timesCompounded);
+
+    total = principal * pow(1 + rate / timesCompounded, timesCompounded * years);
+
+    printf("After %d years, the total will be $%.2lf", years, total);
 
     return 0;
 }
