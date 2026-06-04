@@ -1,22 +1,14 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
 
-    int age = 0;
-
-    printf("Enter your age: ");
-    scanf("%d", &age);
-
-    if(age >= 65) {
-        printf("You are a senior\n");
-    } else if(age > 18) {
-        printf("You are an adult\n");
-    } else if(age < 0) {
-        printf("You haven't born yet\n");
-    } else if (age == 0) {
-        printf("You are a newborn\n");
+    bool isStudent = false;
+    
+    if(isStudent) {
+        printf("You are a student");
     } else {
-        printf("You are a child\n");
+        printf("You are not a student");
     }
 
     return 0;
