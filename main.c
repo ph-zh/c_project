@@ -28,6 +28,5 @@ int main() {
         printf("Invalid choice! Please enter 1 or 2\n");
     }
 
-
     return 0;
 }
