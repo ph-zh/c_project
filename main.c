@@ -1,43 +1,29 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
 
-    char dayOfWeek = '\0';
-    printf("Enter a day of the week (M, T, W, R, F, S, U): ");
-    scanf("%c", &dayOfWeek);
+    float price = 10.00;
+    bool isStudent = false;
+    bool isSenior = false;
 
-    switch(dayOfWeek) {
-        case 'M':
-            printf("It is Monday");
-            break;
-
-        case 'T':
-            printf("It is Tuesday");
-            break;
-
-        case 'W':
-            printf("It is Wednesday");
-            break;
-        
-        case 'R':
-            printf("It is Thursday");
-            break;
-        
-        case 'F':
-            printf("It if Friday");
-            break;
-        
-        case 'S':
-            printf("It is Saturday");
-            break;
-        
-        case 'U':
-            printf("It is Sunday");
-            break;
-
-        default:
-            printf("Please only enter a character (M, T, W, R, F, S, U)");
+    if(isStudent) {
+        if(isSenior) {
+            printf("You get a senior discount of 20%%\n");
+            printf("You get a student discount of 10%%\n");
+            price *= 0.7;
+        } else {
+            printf("You get a student discount of 10%%\n");
+            price *= 0.9;
+        }
+    } else {
+        if(isSenior) {
+        printf("You get a senior discount of 20%%\n");
+        price *= 0.8;
+        }
     }
+
+    printf("The price of a ticket is: $%.2f\n", price);
 
     return 0;
 }
