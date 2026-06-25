@@ -1,16 +1,27 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <string.h>
+
+void happyBirthday(char name[], int age) {
+    printf("\nHappy Birthday to you!");
+    printf("\nHappy Birthday to you!");
+    printf("\nHappy Birthday dear %s", name);
+    printf("\nHappy Birthday to you!");
+    printf("\nYou are %d years old!\n", age);
+}
 
 int main() {
 
-    bool isSunny = false;
+    char name[50] = "";
+    int age = 0;
 
-    if(isSunny) {
-        printf("It is sunny outside");
-    } else {
-        printf("It is cloudy outside");
-    }
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
 
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    happyBirthday(name, age);
 
     return 0;
 }
