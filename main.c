@@ -1,27 +1,60 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdbool.h>
 
-void happyBirthday(char name[], int age) {
-    printf("\nHappy Birthday to you!");
-    printf("\nHappy Birthday to you!");
-    printf("\nHappy Birthday dear %s", name);
-    printf("\nHappy Birthday to you!");
-    printf("\nYou are %d years old!\n", age);
+int getMax(int x, int y) {
+    if(x >= y) {
+        return x;
+    } else{
+        return y;
+    }
+}
+
+bool ageCheck(int age) {
+    
+    if(age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+double cube(double num) {
+    return num * num * num;
+}
+
+double square(double num) {
+    return num * num;
 }
 
 int main() {
 
-    char name[50] = "";
-    int age = 0;
+    double x = square(2.1);
+    double y = square(3.2);
+    double z = square(4.3);
 
-    printf("Enter your name: ");
-    fgets(name, sizeof(name), stdin);
-    name[strlen(name) - 1] = '\0';
+    double a = cube(2);
+    double b = cube(3);
+    double c = cube(4);
 
-    printf("Enter your age: ");
-    scanf("%d", &age);
+    int age = 21;
 
-    happyBirthday(name, age);
+    int max = getMax(5,3);
+
+    printf("%lf\n", x);
+    printf("%lf\n", y);
+    printf("%lf\n", z);
+
+    printf("%lf\n", a);
+    printf("%lf\n", b);
+    printf("%lf\n", c);
+
+    if(ageCheck(age)) {
+        printf("You may sign up\n");
+    } else {
+        printf("You must be 18+ to sign up\n");
+    }
+
+    printf("%d\n", max);
 
     return 0;
 }
