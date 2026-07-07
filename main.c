@@ -1,26 +1,32 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-int add(int x, int y) {
-    int result = x + y;
-    return result;
-}
-
-int subtract(int x, int y) {
-    int result = x - y;
-    return result;
-}
+void hello(char name[], int age); // function prototype
+bool ageCheck(int age);
 
 int main() {
 
+    hello("FreankSpignetti", 30);
 
-    int x = 5;
-    int y = 6;
+    if(ageCheck(14)) {
+        printf("You are old enough to work at pizza bar");
+    } else {
+        printf("You must be 16+ to work at pizza bar");
+    }
 
-    int result = subtract(x,y);
-    
-    printf("%d", result);
-
-
-
+   
     return 0;
+}
+
+void hello(char name[], int age) {
+    printf("Hello %s\n", name);
+    printf("You are %d years old\n", age);
+}
+
+bool ageCheck(int age) {
+    if(age >= 16) {
+        return true;
+    } else {
+        return false;
+    }
 }
