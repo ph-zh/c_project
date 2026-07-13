@@ -26,7 +26,6 @@ void hello(char name[], int age) {
 bool ageCheck(int age) {
     if(age >= 16) {
         return true;
-    } else {
-        return false;
-    }
+    } 
+    return false;
 }
