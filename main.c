@@ -2,9 +2,10 @@
 
 int main(void) {
 
-	double getal = 7.54;
+	int getal;
+	getal = 42;
 
-	printf("Getal = %f\n", getal);
+	printf("Getal = %d\n", getal); // Getal is 42, en niet oud geheugen
 
     return 0;
 }
