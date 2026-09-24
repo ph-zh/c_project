@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void) {
 
-	int getal = 69;
-	char character = 'a';
-	double kommagetal = 9.99999;
+	const double x = 123.451234512345;
+	const double y = 123.451234512300;
 
-    printf("getal = %d character = %c kommagetal = %f", getal, character, kommagetal);
+	printf("x = %f\n", x);
+	printf("y = %f\n", y);
 
     return 0;
 }
