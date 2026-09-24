@@ -3,12 +3,7 @@
 
 int main(void) {
 
-	printf("________   _____\n");
-    printf("|   __ '\' '\'/ /  |\n");
-    printf("|  |__) '\' V / | |\n");
-    printf("|   ___/ > <  | |\n");
-    printf("| |     / . '\' | |____\n");
-    printf("|_|    /_/'\'_\'______|\n");
+	printf("This does't work\n");
 
     return 0;
 }
