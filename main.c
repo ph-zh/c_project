@@ -1,14 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
 
-    int i = 1, sum = 0;
-
-    while (i <= 5) {
-        sum += i;
-        ++i;
-    }
-    printf("sum = %d\n", sum);
+	printf("________   _____\n");
+    printf("|   __ '\' '\'/ /  |\n");
+    printf("|  |__) '\' V / | |\n");
+    printf("|   ___/ > <  | |\n");
+    printf("| |     / . '\' | |____\n");
+    printf("|_|    /_/'\'_\'______|\n");
 
     return 0;
 }
