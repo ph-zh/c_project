@@ -3,7 +3,11 @@
 
 int main(void) {
 
-	printf("This does't work\n");
+	int getal = 69;
+	char character = 'a';
+	double kommagetal = 9.99999;
+
+    printf("getal = %d character = %c kommagetal = %f", getal, character, kommagetal);
 
     return 0;
 }
