@@ -2,7 +2,8 @@
 
 int main(void) {
 
-	printf("PXL-DIGITAL\n");
+	int character = 1;
+	printf("X = %d\n",character);
 
     return 0;
 }
