@@ -2,8 +2,9 @@
 
 int main(void) {
 
-	char character = 'x';
-	printf("X = %d\n",character);
+	double getal = 7.54;
+
+	printf("Getal = %f\n", getal);
 
     return 0;
 }
