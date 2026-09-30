@@ -1,22 +1,28 @@
 /*
-  Schrijf een programma dat de som, het verschil, het product en de deling van 
-  2 reële getallen, die door de gebruiker worden ingegeven, berekent en de resultaten print.
+  Schrijf een programma dat de volgende berekeningen (calculations) uitvoert (performs) op de meegegeven (assigned) variabelen 
+  en gebruik maakt van 1 grote expressie, dus op 1 lijn. Je mag maar 18 lijnen code hebben !
+  Het getal bekom je door alfa met beta te vermenigvuldigen (multiply), daar gamma bij te tellen (count), het geheel (whole)
+  te delen door delta. Gebruik dat voor een modulo/rest operatie met het verschil van gamma min delta.
 */
 #include <stdio.h>
 
 int main( void ) {
+	
+	int alfa, beta, gamma, delta;
+	int getal = 0;
+	
+	printf( "Geef 4 gehele getallen in: " );
+	(void)scanf( "%d %d %d %d", &alfa, &beta, &gamma, &delta );
+		
+	// Voeg volgende lijnen samen zodat dit 1 expressie wordt !
+	// getal = ((alfa * beta + gamma) / delta)%(gamma - delta);
 
-	double getal1 = 0;
-	double getal2 = 0;
-	int result = 0;
 
-	printf( "Geef 2 reele getallen in: " );
-	result = scanf( "%lf %lf", &getal1, &getal2 );
+	getal = alfa * beta;
+	getal += gamma; // getal = getal + gamma
+	getal /= delta; // getal = getal
+	getal %= gamma - delta; // getal = getal % (gamma - delta)
 
-	printf( "%.1lf + %.1lf = %.1lf\n", getal1, getal2, getal1 + getal2 /*som van getal 1 en getal 2*/ );
-	printf( "%.1lf - %.1lf = %.1lf\n", getal1, getal2, getal1 - getal2 /*verschil van getal 1 en getal 2*/ );
-	printf( "%.1lf * %.1lf = %.1lf\n", getal1, getal2, getal1 * getal2 /*product van getal 1 en getal 2*/ );
-	printf( "%.1lf / %.1lf = %.1lf\n", getal1, getal2, getal1 / getal2 /*deling van getal 1 en getal 2*/ );
-
+	printf( "Getal = %d\n", getal );
 	return 0;
 }
