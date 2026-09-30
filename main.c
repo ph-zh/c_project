@@ -1,12 +1,13 @@
+/*
+  Zorg ervoor dat het getal 43 wordt geprint in plaats van het getal 42 door de increment operator (++) op de juiste positie te plaatsen.
+*/
 #include <stdio.h>
 
 int main( void )
 {
-	float getal = 7.98; // constanta made chaning variable impossible
+	int getal = 42;
+	getal++;
 
-	getal = 4.31;
-
-	printf( "Getal = %f\n", getal );
-
+	printf( "Getal = %d\n", getal ); // Voeg de increment operator toe bij de variabele getal.
 	return 0;
 }
