@@ -1,22 +1,22 @@
 /*
-  Maak gebruik van de juiste arthimetic operator om te checken of het ingegeven getal een even of oneven getal is.
+  Schrijf een programma dat de som, het verschil, het product en de deling van 
+  2 reële getallen, die door de gebruiker worden ingegeven, berekent en de resultaten print.
 */
 #include <stdio.h>
 
 int main( void ) {
-	int getal = 0;
+
+	double getal1 = 0;
+	double getal2 = 0;
 	int result = 0;
 
-	printf( "Geef 1 geheel getal in: " );
-	result = scanf( "%d", &getal );
+	printf( "Geef 2 reele getallen in: " );
+	result = scanf( "%lf %lf", &getal1, &getal2 );
 
-	result = getal - 2;
-
-	if( result == 0 ) { // test of het resultaat 0 is
-		printf( "Het getal is even." );
-	} else {
-		printf( "Het getal is oneven." );
-	}
+	printf( "%.1lf + %.1lf = %.1lf\n", getal1, getal2, getal1 + getal2 /*som van getal 1 en getal 2*/ );
+	printf( "%.1lf - %.1lf = %.1lf\n", getal1, getal2, getal1 - getal2 /*verschil van getal 1 en getal 2*/ );
+	printf( "%.1lf * %.1lf = %.1lf\n", getal1, getal2, getal1 * getal2 /*product van getal 1 en getal 2*/ );
+	printf( "%.1lf / %.1lf = %.1lf\n", getal1, getal2, getal1 / getal2 /*deling van getal 1 en getal 2*/ );
 
 	return 0;
 }
