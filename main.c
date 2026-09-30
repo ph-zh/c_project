@@ -1,9 +1,9 @@
-//  Zorg ervoor dat bijgevoegde code PXL-DIGITAL print naar de terminal.
 #include <stdio.h>
 
-int main( void )
-{
-	printf( "PXL-DIGITAL\n" );
+int main( void ) {
 
+	float getal = 7.54;
+
+	printf( "Getal = %.2f\n", getal );
 	return 0;
 }
