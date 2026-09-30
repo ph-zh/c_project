@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-int main( void ) {
+int main( void )
+{
+	int getal = 42;
 
-	float getal = 7.54;
+	printf( "Getal = %d\n", getal ); // Getal is 42, en niet oud geheugen (old memory)
 
-	printf( "Getal = %.2f\n", getal );
 	return 0;
 }
