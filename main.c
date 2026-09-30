@@ -1,11 +1,14 @@
+//  Maak een programma dat de output PXL print
 #include <stdio.h>
 
-int main(void) {
+int main()
+{
+	printf( "________   _____\n" );
+	printf( "|   __ \\ \\ / /  |\n" );
+	printf( "|  |__) \\ V / | |\n" );
+	printf( "|   ___/ > <  | |\n" );
+	printf( "| |     / . \\ | |____\n" );
+	printf( "|_|    /_/\\__\\______|\n" );
 
-	int getal;
-	getal = 42;
-
-	printf("Getal = %d\n", getal); // Getal is 42, en niet oud geheugen
-
-    return 0;
+	return 0;
 }
