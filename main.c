@@ -2,8 +2,11 @@
 
 int main( void )
 {
-	float getal = 6.33;
+	float getal = 7.98; // constanta made chaning variable impossible
 
-	printf( "Getal = %.2f\n", getal );
+	getal = 4.31;
+
+	printf( "Getal = %f\n", getal );
+
 	return 0;
 }
