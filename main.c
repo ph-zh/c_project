@@ -1,8 +1,13 @@
+//  Maak een programma dat de variabelen getal, character en kommagetal print
 #include <stdio.h>
 
-int main() {
+int main()
+{
+	int getal = 69;
+	char character = 'a';
+	double kommagetal = 9.99999;
 
-       printf( "This doesn't work\r\n" );
-       
-       return 0;
+	printf( "getal = %d character = %c kommagetal = %f \n", getal, character, kommagetal);
+
+	return 0;
 }
