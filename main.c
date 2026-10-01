@@ -1,18 +1,35 @@
 /*
-  De output van dit programma is 3.00. Voeg (add) 4 haken (brackets) toe en 1 type cast zodat de output 12.75 wordt.
+  Maak een programma dat het gemiddelde (average) berekend van 5 getallen, tussen de 0 en 20, 
+  die door de gebruiker worden ingegeven. Het programma print "Geslaagd - passed" indien (if) het gemiddelde 
+  groter of gelijk (equal) aan 10 is, anders print het "Niet geslaagd".
 */
+
 #include <stdio.h>
 
-int main( void )
-{
-	int a = 6;
-	int b = 9;
-	int c = 12;
-	int d = 17;
-	float e = 0;
+int main( void ) {
 	
-	e = d % (b + c) * a / ( (float) d - (float) b);
-	printf( "e = %.2f\n", e );
+	float getal[5] = { 0, 0, 0, 0, 0 };
+	for( int i = 0; i < 5; i++ ) {
+		printf( "Geef getal %d in: ", i + 1 );
+		(void)scanf( "%f", &getal[i] );
+	}
 
+	float getal1 = getal[0];
+	float getal2 = getal[1];
+	float getal3 = getal[2];
+	float getal4 = getal[3];
+	float getal5 = getal[4];
+	float gemiddelde = 0.0;
+
+	//===============================================================
+	// Bereken het gemiddelde en schrijf de conditie voor het if statement.
+	gemiddelde = (getal1 + getal2 + getal3 + getal4 + getal5) / 5;
+
+	if( gemiddelde >= 10 ) {
+		printf( "Geslaagd %.2f\n", gemiddelde );
+	} else {
+		printf( "Niet geslaagd %.2f\n", gemiddelde );
+	}
+	//===============================================================
 	return 0;
 }
