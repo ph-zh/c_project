@@ -1,35 +1,45 @@
 /*
-  Maak een programma dat het gemiddelde (average) berekend van 5 getallen, tussen de 0 en 20, 
-  die door de gebruiker worden ingegeven. Het programma print "Geslaagd - passed" indien (if) het gemiddelde 
-  groter of gelijk (equal) aan 10 is, anders print het "Niet geslaagd".
+  Maak een programma dat de volgende geluidsassociatie weergeeft op basis van de input van de gebruiker.
+
+  Loudness in Decibels (dB)    Perception
+  ==========================================
+  50 or lower                  Quiet
+  51-70                        Intrusive
+  71-90                        Annoying
+  91-110                       Very annoying
+  above 110                    Uncomfortable
+  ==========================================
+
+  Je stelt de volgende vraag aan de gebruiker:
+  Geef het geluidsniveau (dB) in:
+
+  Het antwoord van het programma moet 1 van de 5 percepties zijn op basis van de classificatie in de linkse kolom.
 */
 
 #include <stdio.h>
 
 int main( void ) {
 	
-	float getal[5] = { 0, 0, 0, 0, 0 };
-	for( int i = 0; i < 5; i++ ) {
-		printf( "Geef getal %d in: ", i + 1 );
-		(void)scanf( "%f", &getal[i] );
-	}
+	int geluidsniveau = 0;
+	int quiet = 50;
+	int intrusive = 70;
+	int annoying = 90;
+	int veryAnnoying = 110;
 
-	float getal1 = getal[0];
-	float getal2 = getal[1];
-	float getal3 = getal[2];
-	float getal4 = getal[3];
-	float getal5 = getal[4];
-	float gemiddelde = 0.0;
+	printf( "Geef het geluidsniveau (dB) in: " );
+	(void)scanf( "%d", &geluidsniveau );
 
-	//===============================================================
-	// Bereken het gemiddelde en schrijf de conditie voor het if statement.
-	gemiddelde = (getal1 + getal2 + getal3 + getal4 + getal5) / 5;
-
-	if( gemiddelde >= 10 ) {
-		printf( "Geslaagd %.2f\n", gemiddelde );
+	if( geluidsniveau <= quiet ) {
+		printf( "Quiet\n" );
+	} else if( geluidsniveau <= intrusive ) {
+		printf( "Intrusive\n" );
+	} else if( geluidsniveau <= annoying ) {
+		printf( "Annoying\n" );
+	} else if( geluidsniveau <= veryAnnoying ) {
+		printf( "Very annoying\n" );
 	} else {
-		printf( "Niet geslaagd %.2f\n", gemiddelde );
+		printf( "Uncomfortable\n" );
 	}
-	//===============================================================
+
 	return 0;
 }
