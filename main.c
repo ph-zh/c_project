@@ -1,19 +1,18 @@
 /*
-  Schrijf een programma dat de deling van 2 gehele getallen, 
-  die door de gebruiker worden ingegeven, berekent en het resultaat print.
+  De output van dit programma is 3.00. Voeg (add) 4 haken (brackets) toe en 1 type cast zodat de output 12.75 wordt.
 */
 #include <stdio.h>
 
-int main( void ) {
-
-	int getal1 = 0;
-	int getal2 = 0;
-	float result = 0;
-
-	printf( "Geef 2 gehele getallen in: " );
-	scanf( "%d %d", &getal1, &getal2 );
-
-	printf( "%d / %d = %.2f\n", getal1, getal2, result = (float)getal1 / (float)getal2 );
+int main( void )
+{
+	int a = 6;
+	int b = 9;
+	int c = 12;
+	int d = 17;
+	float e = 0;
+	
+	e = d % (b + c) * a / ( (float) d - (float) b);
+	printf( "e = %.2f\n", e );
 
 	return 0;
 }
