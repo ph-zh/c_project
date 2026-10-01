@@ -1,28 +1,19 @@
 /*
-  Schrijf een programma dat de volgende berekeningen (calculations) uitvoert (performs) op de meegegeven (assigned) variabelen 
-  en gebruik maakt van 1 grote expressie, dus op 1 lijn. Je mag maar 18 lijnen code hebben !
-  Het getal bekom je door alfa met beta te vermenigvuldigen (multiply), daar gamma bij te tellen (count), het geheel (whole)
-  te delen door delta. Gebruik dat voor een modulo/rest operatie met het verschil van gamma min delta.
+  Schrijf een programma dat de deling van 2 gehele getallen, 
+  die door de gebruiker worden ingegeven, berekent en het resultaat print.
 */
 #include <stdio.h>
 
 int main( void ) {
-	
-	int alfa, beta, gamma, delta;
-	int getal = 0;
-	
-	printf( "Geef 4 gehele getallen in: " );
-	(void)scanf( "%d %d %d %d", &alfa, &beta, &gamma, &delta );
-		
-	// Voeg volgende lijnen samen zodat dit 1 expressie wordt !
-	// getal = ((alfa * beta + gamma) / delta)%(gamma - delta);
 
+	int getal1 = 0;
+	int getal2 = 0;
+	float result = 0;
 
-	getal = alfa * beta;
-	getal += gamma; // getal = getal + gamma
-	getal /= delta; // getal = getal
-	getal %= gamma - delta; // getal = getal % (gamma - delta)
+	printf( "Geef 2 gehele getallen in: " );
+	scanf( "%d %d", &getal1, &getal2 );
 
-	printf( "Getal = %d\n", getal );
+	printf( "%d / %d = %.2f\n", getal1, getal2, result = (float)getal1 / (float)getal2 );
+
 	return 0;
 }
