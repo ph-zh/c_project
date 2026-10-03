@@ -1,22 +1,34 @@
 /*
-  Voer onderstaande code uit en corigeer.
-    1. Wat verwacht je dat er geprint wordt?
-    2. Wat wordt er geprint?
-    3. Wat is de oorzaak?
-    4. Corrigeer de code
+  Maak een programma dat bepaalt of een character ingegeven door de gebruiker een hoofdletter is of een kleine letter is.
+
+  Voorbeeld
+  =========
+  Geef een karakter in: B
+  Het character B is Upper Case
+
+  Geef een karakter in: t
+  Het character t is Lower Case
+
+  Geef een karakter in: &
+  Het character & is geen letter
 */
 
 #include <stdio.h>
 
 int main( void ) {
 
-	int i = 9;
+	char character = 0;
 
-	if( i == 8 ) {
-		printf( "i is 8 !!!\n" );
-	} else {
-		printf( "i is NIET 8 !!!\n" );
-	}
+	printf( "Geef een karakter in: " );
+	(void)scanf( "%c", &character );
 
+  if(character >= 'A' && character <= 'Z') {
+      printf( "Het character %c is Upper Case", character );
+  } else if (character >= 'a' && character <= 'z') {
+      printf( "Het character %c is Lower Case", character );
+  } else {
+      printf( "Het character %c is geen letter", character );
+  }
+	
 	return 0;
 }
