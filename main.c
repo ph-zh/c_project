@@ -1,34 +1,26 @@
 /*
-  Maak een programma dat bepaalt of een character ingegeven door de gebruiker een hoofdletter is of een kleine letter is.
-
-  Voorbeeld
-  =========
-  Geef een karakter in: B
-  Het character B is Upper Case
-
-  Geef een karakter in: t
-  Het character t is Lower Case
-
-  Geef een karakter in: &
-  Het character & is geen letter
+  Maak een programma dat bepaalt of een jaar een schrikkeljaar is of niet. Print het resultaat uit. 
+  "Jaar x is een schrikkeljaar" of "Jaar x is geen schrikkeljaar".
 */
 
 #include <stdio.h>
 
 int main( void ) {
+  
+	int schrikkelJaar = 0;
 
-	char character = 0;
+	printf( "Geef een jaartal in: " );
+	(void)scanf( "%d", &schrikkelJaar );
 
-	printf( "Geef een karakter in: " );
-	(void)scanf( "%c", &character );
+	if (schrikkelJaar % 4 != 0) {
+		printf( "Jaar %d is geen schrikkeljaar", schrikkelJaar );
+	} else if (schrikkelJaar % 100 != 0) {
+		printf( "Jaar %d is een schrikkeljaar", schrikkelJaar );
+	} else if (schrikkelJaar % 400 != 0) {
+		printf( "Jaar %d is geen schrikkeljaar", schrikkelJaar );
+	} else {
+		printf( "Jaar %d is een schrikkeljaar", schrikkelJaar );
+	}
 
-  if(character >= 'A' && character <= 'Z') {
-      printf( "Het character %c is Upper Case", character );
-  } else if (character >= 'a' && character <= 'z') {
-      printf( "Het character %c is Lower Case", character );
-  } else {
-      printf( "Het character %c is geen letter", character );
-  }
-	
 	return 0;
 }
