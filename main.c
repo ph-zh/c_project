@@ -1,30 +1,39 @@
 /*
- * Zorg dat volgend programma succesvol compiled. Je mag enkel de operators aanpassen (==, !=, >, <, >=, <=, &&, ||, !).
- */
-
-#include <assert.h>
-#include <stdlib.h>
-#include <stdint.h>
+  Schrijf een programma dat de gebruik vraagt om het aantal seconden in te geven. 
+  Het programma berekent dan hoeveel dagen, uren, minuten en seconden dit is.
+*/
 #include <stdio.h>
+#include <stdint.h>
 
 int main( void )
 {
-	uint8_t A = 4;
-	uint8_t B = 2;
+	uint64_t aantalSeconden = 0;
+	uint16_t dagen = 0;
+	uint8_t uren = 0;
+	uint8_t minuten = 0;
+	uint8_t seconden = 0;
+	uint32_t rest = 0; // tussen de 0 en 86400 (excl.) > 65535 ! (credits to Niels)
 
-	assert( A != B );
-	assert( A == ( B + B ) );
-	assert( ( A >= B ) && ( A == A ) );
-	assert( ( A != B ) || ( A == A ) );
-	assert( B < A );
-	assert( A > B );
-	assert( A < ( B + A ) ? 1 : 0 );
-	assert( A < B ? 0 : A < B ? 0 : A < B ? 0 : 1 );
-	assert( !( 1 < 0 ) );
-	assert( !( 1 != 1 ) );
-	assert( !!1 );
+	printf( "Geef het aantal seconden: " );
+	(void)scanf( "%d", &aantalSeconden );
 
-	printf( "1\n" );
+	// Bereken het aantal dagen
+	dagen = (aantalSeconden - (aantalSeconden % ( 60 * 60 * 24))) / (60 * 60 * 24); // Bereken aantal dagen m.b.v. aantalSeconden
+	rest = (aantalSeconden % (60 * 60 * 24));  // Bereken de restwaarde dat niet in een dag past
+	printf( "Dagen = %d\n", dagen );
 
-	return EXIT_SUCCESS;
+	// Bereken het aantal uren
+	uren = (rest - (rest % ( 60 * 60))) / (60 * 60); // Bereken aantal uren m.b.v. aantalSeconden die resteren
+	rest = rest % ( 60 * 60 ); // Bereken de restwaarde dat niet in een uur past
+	printf( "Uren = %d\n", uren );
+
+	// Bereken het aantal minuten
+	minuten = (rest - (rest % 60)) / 60; // Bereken aantal minuten m.b.v. aantalSeconden die resteren
+	printf( "Minuten = %d\n", minuten );
+
+	// Bereken het aantal seconden
+	seconden = rest % 60; // Bereken de restwaarde dat niet in een minuut past
+	printf( "Seconden = %d", seconden );
+
+	return 0;
 }
